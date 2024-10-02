@@ -5,6 +5,7 @@ import { OfferingTypeFilter, PropertyTypeFilter } from '../../utils/constants';
 export class FiltersPopupPage extends BasePage {
 
     private offeringTypeBtn: (offeringType: OfferingTypeFilter) => Locator;
+    private priceFilter: Locator;
     private priceFilterMin: Locator;
     private priceFilterMax: Locator;
     private propertyTypeCheckbox: (propertyType: PropertyTypeFilter) => Locator;
@@ -15,10 +16,9 @@ export class FiltersPopupPage extends BasePage {
         super(page);
         this.offeringTypeBtn = (offeringType: OfferingTypeFilter): Locator =>
             page.locator(`[data-test-id=offering-type-${offeringType}]`);
-        this.priceFilterMin = page.locator('[data-test-id=price-filter]')
-            .locator('[data-test-id=minmax-filter-min]');
-        this.priceFilterMax = page.locator('[data-test-id=price-filter]')
-            .locator('[data-test-id=minmax-filter-max]');
+        this.priceFilter = page.locator('[data-test-id=price-filter]');
+        this.priceFilterMin = this.priceFilter.locator('[data-test-id=minmax-filter-min]');
+        this.priceFilterMax = this.priceFilter.locator('[data-test-id=minmax-filter-max]');
         this.propertyTypeCheckbox = (propertyType: PropertyTypeFilter): Locator =>
             page.locator(`[data-test-id=${propertyType}-checkbox-filter] label`);
 

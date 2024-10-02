@@ -21,8 +21,9 @@ Tests:
 3. Install all required dependencies, including Playwright:
 	npm install
     You might need to manually install Playwright browsers afterwards:
-    	npm init playwright@latest 
-4. To execute the tests, run command 
+    	npm install playwright 
+4. Set userAgent in specs files to bypass robot detection.
+5. To execute the tests, run command.
 	npx playwright test
-5. To view tests results run   
+6. To view tests results run   
     	npx playwright show-report

@@ -23,7 +23,7 @@ Tests:
     You might need to manually install Playwright browsers afterwards:
     	npm install playwright 
 4. Set userAgent in specs files to bypass robot detection.
-5. To execute the tests, run command.
+5. To execute the tests, run command
 	npx playwright test
 6. To view tests results run   
     	npx playwright show-report

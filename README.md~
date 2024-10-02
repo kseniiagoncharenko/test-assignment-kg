@@ -16,14 +16,13 @@ Tests:
 	- NodeJS 18+
 	- VS Code or any other IDE/terminal
 
-
 1. Clone this repository to your machine
 2. Open folder with tests (e2e-tests) in VS Code. 
 3. Install all required dependencies, including Playwright:
-    npm install
+	npm install
     You might need to manually install Playwright browsers afterwards:
-    npm init playwright@latest 
+    	npm init playwright@latest 
 4. To execute the tests, run command 
 	npx playwright test
 5. To view tests results run   
-    npx playwright show-report
+    	npx playwright show-report

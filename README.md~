@@ -1,1 +1,29 @@
 # test-assignment-kg
+
+This project contains end-to-end tests using Playwright.
+Smoke tests should cover critical functionality verification. For funda it might include searching for a property; viewing property details; navigation and filtering options etc..
+
+Tests:
+1. Search
+    1.1. Verify search on the main page and search results: to confirm that searching on the main page displays relevant results.
+    1.2. Verify search filters: to ensure that applying search filters (e.g., price range, property type) works correctly and returns the expected results.
+    2.3. Verify property details: to validate that clicking on a search result displays the correct details (e.g., address) of the real estate property.
+2. Authorization Verification
+    2.1. Favorites should not be available to unauthorized users: to ensure that the Favorites page is hidden or inaccessible for users who are not logged in.
+    2.2. User should not be able to login with incorrect email and password: to verify that users receive an appropriate error message when attempting to log in with invalid credentials.
+
+# Prerequisites:
+	- NodeJS 18+
+	- VS Code or any other IDE/terminal
+
+
+1. Clone this repository to your machine
+2. Open folder with tests (e2e-tests) in VS Code. 
+3. Install all required dependencies, including Playwright:
+    npm install
+    You might need to manually install Playwright browsers afterwards:
+    npm init playwright@latest 
+4. To execute the tests, run command 
+	npx playwright test
+5. To view tests results run   
+    npx playwright show-report

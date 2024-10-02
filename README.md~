@@ -17,7 +17,7 @@ Tests:
 	- VS Code or any other IDE/terminal
 
 1. Clone this repository to your machine
-2. Open folder with tests (e2e-tests) in VS Code. 
+2. Open folder with tests in VS Code. 
 3. Install all required dependencies, including Playwright:
 	npm install
     You might need to manually install Playwright browsers afterwards:

@@ -65,7 +65,7 @@ test.describe('Search', () => {
     await framework.searchHelper.assertFirstSearchResultPrice(searchData.maxPrice, searchData.offeringType);
   });
 
-  test('Verify realty details', async ({ }) => {
+  test('Verify property details', async ({ }) => {
     
     const searchData = {
       city: 'Amsterdam',
@@ -84,6 +84,6 @@ test.describe('Search', () => {
     console.log(expectedStreet);
     await framework.searchHelper.openFirstSearchResultDetails();
 
-    await framework.realtyDetailsHelper.assertAddressIsShown(searchData.city, expectedStreet)
+    await framework.propertyDetailsHelper.assertAddressIsShown(searchData.city, expectedStreet)
   });
 });

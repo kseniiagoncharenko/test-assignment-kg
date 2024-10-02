@@ -1,7 +1,7 @@
 import { Locator, Page } from '@playwright/test';
 import { BasePage } from '../base-page';
 
-export class RealtyDetailsPage extends BasePage {
+export class PropertyDetailsPage extends BasePage {
 
     public address: (city: string) => Locator;
 

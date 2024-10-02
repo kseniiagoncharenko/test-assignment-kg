@@ -4,14 +4,14 @@ import { CookiesHelper } from "./helpers/login/cookies-helper";
 import { FiltersHelper } from "./helpers/search/filters-helper";
 import { LoginHelper } from "./helpers/login/login-helper";
 import { NavigationHelper } from "./helpers/navigation-helper";
-import { RealtyDetailsHelper } from "./helpers/details/realtydetails-helper";
+import { PropertyDetailsHelper } from "./helpers/details/propertydetails-helper";
 
 export class Framework {
     public cookiesHelper: CookiesHelper;
     public filtersHelper: FiltersHelper;
     public loginHelper: LoginHelper;
     public navigationHelper: NavigationHelper;
-    public realtyDetailsHelper: RealtyDetailsHelper;
+    public propertyDetailsHelper: PropertyDetailsHelper;
     public searchHelper: SearchHelper;
 
     constructor(readonly page: Page) {
@@ -20,7 +20,7 @@ export class Framework {
         this.filtersHelper = new FiltersHelper(page);
         this.loginHelper = new LoginHelper(page);
         this.navigationHelper = new NavigationHelper(page);
-        this.realtyDetailsHelper = new RealtyDetailsHelper(page);
+        this.propertyDetailsHelper = new PropertyDetailsHelper(page);
         this.searchHelper = new SearchHelper(page);
     }
 }

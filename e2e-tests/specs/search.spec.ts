@@ -66,24 +66,27 @@ test.describe('Search', () => {
   });
 
   test('Verify property details', async ({ }) => {
-    
+
     const searchData = {
       city: 'Amsterdam',
       area: 'Plaats in Noord-Holland',
-      propertyType: PropertyTypeFilter.Apartment
+      propertyType: PropertyTypeFilter.Apartment,
+      offeringType: OfferingTypeFilter.Buy
     };
 
     await framework.searchHelper.searchAndSelectHouseIn(searchData.city, searchData.area);
+
+    await page.waitForURL(getBuyUrl());
 
     await framework.searchHelper.openFiltersPopup();
     await framework.filtersHelper.applyPropertyTypeFilters(searchData.propertyType);
 
     await page.waitForURL(getBuyUrl());
 
-    const expectedStreet = await framework.searchHelper.getAddressFromFirstSearchResult();
-    console.log(expectedStreet);
+    const expectedPropertyDetails = await framework.searchHelper.getSearchResultPropertyDetails(searchData.offeringType);
+
     await framework.searchHelper.openFirstSearchResultDetails();
 
-    await framework.propertyDetailsHelper.assertAddressIsShown(searchData.city, expectedStreet)
+    await framework.propertyDetailsHelper.assertPropertyDetailsAreShown(searchData.city, expectedPropertyDetails);
   });
 });

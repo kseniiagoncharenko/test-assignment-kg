@@ -7,3 +7,6 @@ export function getRentUrl() {
 export function getFavoritesUrl() {
     return '/favorieten/';
 }
+export function getAgentUrl() {
+    return '/makelaar/';
+}

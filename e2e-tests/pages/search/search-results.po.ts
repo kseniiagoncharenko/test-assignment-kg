@@ -11,7 +11,6 @@ export class SearchResultsPage extends BasePage {
     public sortingDropdown: Locator;
 
     public searchResultItem: Locator;
-    public searchResultPostalCodeCity: Locator;
 
     constructor(readonly page: Page) {
         super(page);
@@ -22,7 +21,6 @@ export class SearchResultsPage extends BasePage {
         this.sortingDropdown = page.locator('[data-test-id=sorting-dropdown]');
 
         this.searchResultItem = page.locator('[data-test-id=search-result-item]');
-        this.searchResultPostalCodeCity = page.locator('[data-test-id=postal-code-city]');
     }
 
     public async clickOpenFiltersPopup() {

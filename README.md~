@@ -7,7 +7,7 @@ Tests:
 1. Search
     1.1. Verify search on the main page and search results: to confirm that searching on the main page displays relevant results.
     1.2. Verify search filters: to ensure that applying search filters (e.g., price range, property type) works correctly and returns the expected results.
-    2.3. Verify property details: to validate that clicking on a search result displays the correct details (e.g., address) of the real estate property.
+    2.3. Verify property details: to validate that clicking on a search result displays the correct details (e.g., address, price, real estate agent name) of the real estate property.
 2. Authorization Verification
     2.1. Favorites should not be available to unauthorized users: to ensure that the Favorites page is hidden or inaccessible for users who are not logged in.
     2.2. User should not be able to login with incorrect email and password: to verify that users receive an appropriate error message when attempting to log in with invalid credentials.
